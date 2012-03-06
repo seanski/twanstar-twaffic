@@ -12,12 +12,11 @@ class IncidentsController < ApplicationController
   end
 
   def latest
-    unless @incidents = Rails.cache.fetch("incidents")
-      Incident.synchronize
-      @incidents = Incident.where(reported_at: (Time.now - 3.hours)..Time.now)
-      Rails.cache.write('incidents', @incidents.as_json, :expires_in => 5.minutes, :race_condition_ttl => 30.seconds)
-    end
-     respond_with @incidents
+
+    Incident.synchronize
+    @incidents = Incident.where(reported_at: (Time.now - 3.hours)..Time.now)
+
+    respond_with @incidents
   end
 
   # GET /incidents/1
