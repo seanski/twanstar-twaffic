@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  location: MyString
+  description: MyString
+  vehicles: 1
+  lanes: MyString
+  status: MyString
+  time: 2012-03-05 17:11:06
+  latitude: 1.5
+  longitude: 1.5
+
+two:
+  location: MyString
+  description: MyString
+  vehicles: 1
+  lanes: MyString
+  status: MyString
+  time: 2012-03-05 17:11:06
+  latitude: 1.5
+  longitude: 1.5

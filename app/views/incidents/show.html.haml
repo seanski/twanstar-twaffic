@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Location:
+  = @incident.location
+%p
+  %b Description:
+  = @incident.description
+%p
+  %b Vehicles:
+  = @incident.vehicles
+%p
+  %b Lanes:
+  = @incident.lanes
+%p
+  %b Status:
+  = @incident.status
+%p
+  %b Time:
+  = @incident.time
+%p
+  %b Latitude:
+  = @incident.latitude
+%p
+  %b Longitude:
+  = @incident.longitude
+
+= link_to 'Edit', edit_incident_path(@incident)
+\|
+= link_to 'Back', incidents_path
