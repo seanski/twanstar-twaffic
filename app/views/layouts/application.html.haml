@@ -46,7 +46,7 @@
           %a.brand{:href => "#"}MapsDemo
           .container-fluid.nav-collapse
             %ul.nav
-              %li= link_to "Incidents", "Home"
+              %li= link_to "Incidents", "/"
 
 
     .container-fluid
@@ -66,7 +66,7 @@
       Le javascript
       \==================================================
     / Placed at the end of the document so the pages load faster
-    = javascript_include_tag "application"
+    = javascript_include_tag "app-lication"
     :javascript
       $(document).ready(function(){ initialize()})
 
