@@ -7,11 +7,7 @@ getIncidents = ->
     markers.length = 0
     for incident in incidents
       buildMarker incident
-      $("#incident_list").append("""
-        <h2>#{incident.description}</h2>
-        <p>#{incident.reported_at}<</p>
-
-                  """)
+      buildSidebar incident
   for marker in markers
     marker.setMap map
 
@@ -23,6 +19,14 @@ buildMarker = (incident) ->
     title: incident.description
 
   markers.push new google.maps.Marker opts
+
+buildSidebar = (incident) ->
+  inc =
+    description: incident.description
+    location: incident.location
+    date: incident.reported_at
+
+  $("#incident_list").append($("#sidebar_item").render(inc))
 
 $(document).ready ->
   getIncidents()

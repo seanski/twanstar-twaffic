@@ -15,6 +15,14 @@
     %link{:href => "images/apple-touch-icon-72x72.png", :rel => "apple-touch-icon", :sizes => "72x72"}/
     %link{:href => "images/apple-touch-icon-114x114.png", :rel => "apple-touch-icon", :sizes => "114x114"}/
     = javascript_include_tag "http://maps.googleapis.com/maps/api/js?key=AIzaSyCYWBUgN_07U5hO8cTe9UD9mWLm90JDsJk&sensor=false"
+    :erb
+      <script id="sidebar_item" type="text/javascript">
+        <h4>{{=description}}</h4>
+        <p>{{=location}}<br />
+        {{=date}}</p>
+
+      </script>
+
     :javascript
       var map;
       function initialize() {
