@@ -33,6 +33,8 @@
         };
         map = new google.maps.Map(document.getElementById("map_canvas"),
             myOptions);
+        var trafficLayer = new google.maps.TrafficLayer();
+        trafficLayer.setMap(map);
       }
 
   %body{onload: "initialize()"}
